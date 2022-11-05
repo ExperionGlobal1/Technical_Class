@@ -1,0 +1,30 @@
+// Define mixin with two arguments
+@mixin bordered($color,$width) {
+    border: $width solid $color;    
+}
+@mixin nav-style {
+    nav{
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      li{
+        display:inline-block;
+      }
+      a{
+        display: block;
+        padding: 6px 12 px;
+        text-decoration: none;
+      }
+    }  
+  }
+// @include nav-style();
+
+
+
+   .div-border{
+     @include bordered(blue,1px );   /* call  mixin with two value*/
+     color: black;
+     background-color: yellowgreen;
+}

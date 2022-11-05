@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create_Booking_Form</title>
+</head>
+
+<body>
+
+    <body style="background-color:skyblue;">
+        <p style="background-color:red;font-size:30px;text-align-last: center;">Booking Your Tickets</p>
+
+        <video width="320" height="240" loop controls autoplay muted>
+            <source src="C:\HTML_Projects\FMS_Raj_kishore_Yadav\TechClassWork\video\file.mp4" type="video/mp4">
+            <!--give the video path-->
+            Your browser does not support the video tag.
+        </video>
+
+        <label for="favcolor">select your favourite color:</label>
+        <input type="color" name=" favcolor" id="favcolor" value="#ff0000" />
+        <input type="range" min="1" max="100" value="25" class="slider" id="myRange" />
+
+        <!--Booking form start-->
+        <form action="print.html" method="GET">
+            <table cellspacing="6" cellpadding="2">
+                <tr>
+                    <td><label for="title">Title:</label></td>
+                    <td><select id="title" name="title">
+                            <option value="1"> Mr.</option>
+                            <option value="2"> Mrs.</option>
+                            <option value="3" selected>Ms</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">First name:</label></td>
+                    <td><input type="text" id="firstname" name="firstname" placeholder="Please enter First Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastName">Last name:</label></td>
+                    <td><input type="text" id="lastName" name="lastName" placeholder="Please enter last Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td><input type="radio" id="Male" name="gender" value="1" />Male</td>
+                    <td><input type="radio" id="Female" name="gender" value="2" />Female</td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea id="address" name="address" placeholder="Please enter your Address" rows="6"
+                            cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date Of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob" placeholder="Please enter Date of Birth"></td>
+                </tr>
+                <tr>
+                    <td><label for="mob"> Mobile Number:</label></td>
+                    <td><input type="number" id="mob" name="mob" placeholder="please enter Mob no"></td>
+                </tr>
+                <tr>
+                    <td><label for="email"> Email_Id:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="please enter Email_Id"></td>
+                </tr>
+                <tr>
+                    <td><label for="contact">Can we contact you?</label></td>
+                    <td><input type="radio" id="contact" name="contact" value="1" />Yes</td>
+                    <td><input type="radio" id="contact" name="contact" value="2" />No</td>
+                </tr>
+                <tr>
+                    <td><label for="Communicationm">Communicationm Preferrence:?</label></td>
+                    <td><input type="checkbox" id="Communicationm" name="Communicationm" value="1" />Email_Id</td>
+                    <td><input type="checkbox" id="Communicationm" name="Communicationm" value="1" />SMS</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="agree" name="agree" value="1" />I agree to<span style="color:blue ;">
+                            term and condition</span> of the website</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submit" name="submit" value="SUBMIT BUTTON" onclick="saveData()"
+                            style="color:white;background-color: blue;" />
+                        <input type="reset" id="reset" name="reset" value="RESET"
+                            style="color:white;background-color: blue;" />
+                    </td>
+                </tr>
+                <tr>
+                    <!--File upload controls-->
+                    <td> <input type="file" name="fileupload" accept="image/*" /> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+        <!--Booking Form  End-->
+
+        <script>
+            function saveData() {
+
+                var firstname = document.getElementById('firstname').value;
+                var lastname = document.getElementById('lastName').value;
+                var address = document.getElementById('address').value;
+
+                var formData =
+                {
+                    firstname,
+                    lastname,
+                    address
+                }
+                localStorage.setItem('formData', JSON.stringify(formData));
+                alert('Hello Raj')
+
+                console.log(formData)
+            }
+        </script>
+    </body>
+
+</html>

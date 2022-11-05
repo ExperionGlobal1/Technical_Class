@@ -1,0 +1,98 @@
+body{
+    font-family: 'Courier New','Courier New', Courier, monospace;
+    padding: 0px;
+    background-color: blue;
+}
+.special{
+       color:blueviolet;
+       background: aquamarine;
+       font-size: large;
+       font-weight: bold;
+       font-style: italic;
+       font-family:'franklin';
+       text-align: center;
+   }
+   #sub-title{
+  font-size: medium;
+  color:brown;
+   }
+   input, textarea{
+      border: 1px solid blue;
+      border-radius: 5px;
+
+   }
+ .hii{ 
+    width: 90;
+    /* height: 100px; */
+    border: 1px dashed black;
+    /* padding: 10px 5px 5px 10px; */
+    /* padding: 10px 5px; */
+    padding: 20px;
+    padding-top: 5px;
+    margin: 20px;
+    text-align: justify;
+}
+.container{
+     /* display:flex;     */
+     /* online-flex */
+    /* width: 90; */
+    /* height: 100px; */
+    /* border: 1px dashed black; */
+    /* padding: 10px 5px 5px 10px; */
+    /* padding: 10px 5px; */
+    /* padding-top: 5px; */
+    /* margin: 20px; */
+    background:yellow;
+    text-align: justify;
+    text-align:center;
+    position: relative;
+    top: 40px;
+    padding: 20px;
+    border:1px solid green;
+    width: 1200px;
+    z-index: 2;
+}
+.left-item{
+    position: relative;
+    top:50px;
+    padding:20px;
+    border: 1px solid black;
+    height: 20px;
+    float: left;
+    width: 47%;
+    background-color:blueviolet;
+    z-index: 2;
+    text-align:left;
+}
+.right-item{
+    position: relative;
+    border:1px solid black;
+    top:-12px;
+    padding:20px;
+    height: 20px;
+    float: right;
+    width:50%;
+    background-color: aqua;
+    z-index: 2;
+    text-align: right;
+} 
+.another-div{
+    position:absolute;
+    background-color:greenyellow;
+    height: fit-content;
+}
+a:link{
+color: white;
+font-weight: bold;
+}
+a:visited{
+    color: violet;
+    font-weight:bolder;
+}
+a:hover{
+    color: black;
+    font-style:italic;
+}
+.another-div:hover{
+    background-color: antiquewhite;
+}
